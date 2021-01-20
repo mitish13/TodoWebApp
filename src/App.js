@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
+import Form from './Components/Form';
 import './App.css';
+import Header from './Components/Header';
+import TodoList from './Components/TodoList';
+const App=()=>{
+    const[inputText,setInputText]=useState("");
+    const[todo,setTodo]=useState([]);
+    const[empty,setEmpty]=useState(false);
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    
+    return(
+        <div className="container">
+            <Header header="JUST DO IT"/>
+            <div className="body">
+            <Form empty={empty} setInputText={setInputText} todo={todo} setTodo={setTodo} inputText={inputText} setEmpty={setEmpty}/>
+            
+            <TodoList todo={todo} setTodo={setTodo} />
+            </div>
+        </div>
+    )
 }
 
 export default App;
