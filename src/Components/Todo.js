@@ -24,8 +24,9 @@ const Todo=({item,todo,setTodo})=>{
             <p onClick={doneHandler} className={item.completed?'strike':''}> 
                  
                 {item.text}
+               
             </p>
-          
+           
             <button onClick={deleteHandler} >
                 X
             </button>

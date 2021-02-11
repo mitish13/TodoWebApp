@@ -14,6 +14,7 @@ const App=()=>{
         <div className="container">
             <Header header="JUST DO IT"/>
             <div className="body">
+                
             <Form empty={empty} setInputText={setInputText} todo={todo} setTodo={setTodo} inputText={inputText} setEmpty={setEmpty}/>
             
             <TodoList todo={todo} setTodo={setTodo} />
